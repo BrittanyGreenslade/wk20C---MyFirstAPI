@@ -23,7 +23,7 @@ def get_animals():
 
 @app.post("/animals")
 def add_animal():
-    animal_name: None
+    # animal_name: None
     # this saves the animal name that's input into postman in a variable
     animal_name = request.json['animalName']
     conn = dbconnect.get_db_connection()
