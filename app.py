@@ -55,11 +55,8 @@ def add_animal():
     if(animal_id == -1):
         return Response("Add new animal failed!", mimetype='text/plain', status=500)
     else:
+        # returns success message in text data with status 201 = created
         return Response("Your animal has been added!", mimetype='application/json', status=201)
-    # don't need id here because it's auto'd
-    # I commented this stuff out because we didn't need input from the user??
-    # json.dumps(animal_name, default=str)
-    # returns success message in text data with status 201 = created
 
 
 @app.patch("/animals")
